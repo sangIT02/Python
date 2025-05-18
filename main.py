@@ -1,38 +1,16 @@
-import math
+# This is a sample Python script.
+
+# Press Shift+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def checkSNT(n):
-    if n < 2 or n > 10000000:
-        return False
-    else:
-        for i in range(2, int(math.sqrt(n))):
-            if n % i == 0:
-                return False
-    return True
+def print_hi(name):
+    # Use a breakpoint in the code line below to debug your script.
+    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
-def checkDoiXung(n):
-    n = str(n)
-    if len(n) < 2:
-        return False
-    l, r = 0, len(n)-1
-    while l <= r:
-        if n[l] == n[r]:
-            l += 1
-            r -= 1
-        else:
-            return False
-    return True
 
-while True:
-    e = int(input("Nhap so nguyen E khong qua 8 chu so: "))
-    s = int(input("Nhap so nguyen S: "))
-    if e <= 10000000 and s < e:
-        break
-    print("so nguyen E co khong qua 8 chu so va so nguyen S < E, moi nhap lai!")
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    print_hi('PyCharm')
 
-tong = 0
-for i in range(s, e):
-    if checkSNT(i) and checkDoiXung(i):
-        print(i)
-        tong += i
-print("Tong = ",tong)
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
